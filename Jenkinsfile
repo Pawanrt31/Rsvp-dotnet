@@ -6,7 +6,7 @@ dotnet = 'path\\to\\dotnet.exe'
 stages {
 stage ('Checkout') {
             steps {
-                 git url: 'https://github.com/arjunachari12/pipelines-dotnet-core',branch: 'master'
+                 git url: 'https://github.com/Pawanrt31/Rsvp-dotnet',branch: 'master'
             }
 }
 stage ('Restore PACKAGES') {     
@@ -22,16 +22,16 @@ stage('Build') {
    }
    stage('Publish') {
      steps {
-           bat 'dotnet publish pipelines-dotnet-core.csproj -c Release'
+           bat 'dotnet publish Rsvp-dotnet.csproj -c Release'
       }
    }
 
-    stage('deploy') {
+    /*stage('deploy') {
         steps {
         azureWebAppPublish azureCredentialsId: params.azure_cred_id,
             resourceGroup: "myResourceGroup", appName: "jenkinssample", sourceDirectory: "bin/Release/netcoreapp2.2/publish/"
         }
-    }
+    }*/
 
  }
 }
