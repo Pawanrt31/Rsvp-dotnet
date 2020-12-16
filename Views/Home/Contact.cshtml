@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact Us 123456</h2>
+
+<h1 class="bg-primary">Contact page</h1>
+
+<form method="post" action="~/Home/Contact">
+        <p>Fruits count: <input type="text" id="fruitcount" name="x" /></p>
+        <p>Vegetables count: <input type="text" id="vegcount" name="y" /></p>
+        <input type="submit" value="Submit" />
+    </form>
+
+@*@using (Html.BeginForm())
+{
+<p>Fruits count: @Html.TextBox("x")</p>
+   <p> Vegetables count: @Html.TextBox("y") </p>
+   <input type="submit" value="Submit" />
+}*@
+@*<form method="post" action="~/Home/Contact">
+    <p>Fruits count: <input type="text" id="fruitcount" name="x" /></p>
+    <p>Vegetables count: <input type="text" id="vegcount" name="y" /></p>
+    <input type="submit" value="Submit" />
+</form>*@
+

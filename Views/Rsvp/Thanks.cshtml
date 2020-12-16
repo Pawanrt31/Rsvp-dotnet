@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thanks</h2>
+
+@{ 
+    var friend = ViewBag.frnd;
+}
+
+<h1>Thank you (@friend.FriendName) for your RSVP</h1>
+
+@if(friend.WillAttend)
+{
+    <h3>Glad to hear that : how would you come from (@friend.City)</h3>
+}
+else
+{
+    <h3>Sorry to hear that : but (@friend.City) is not far plz think</h3>
+}
+

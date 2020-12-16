@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm("Index", "Rsvp", FormMethod.Post))
+{
+    <p>First Name   :@Html.TextBox("FriendName")</p>
+    <p>City   :@Html.TextBox("City")</p>
+    <p>Will you attend? : @Html.DropDownList("WillAttend",new[] { new SelectListItem { Text="Yes!!, I will attend", Value=Boolean.TrueString},
+                         new SelectListItem { Text="No: Sorry I cant make it", Value=Boolean.FalseString } }, "Please Respond")</p>
+    <input type="submit" value="Submit" />
+}
+
