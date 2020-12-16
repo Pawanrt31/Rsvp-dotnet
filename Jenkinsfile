@@ -22,16 +22,16 @@ stage('Build') {
    }
    stage('Publish') {
      steps {
-           bat 'dotnet publish Rsvp-dotnet.csproj -c Release'
+           bat 'dotnet publish RsvpPage.csproj -c Release'
       }
    }
 
-    /*stage('deploy') {
+    stage('deploy') {
         steps {
         azureWebAppPublish azureCredentialsId: params.azure_cred_id,
-            resourceGroup: "myResourceGroup", appName: "jenkinssample", sourceDirectory: "bin/Release/netcoreapp2.2/publish/"
+            resourceGroup: "MyResourceGroup", appName: "jenkinspawan", sourceDirectory: "bin/Release/netcoreapp2.2/publish/"
         }
-    }*/
+    }
 
  }
 }
